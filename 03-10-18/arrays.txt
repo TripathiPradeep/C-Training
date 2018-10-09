@@ -1,0 +1,43 @@
+//Arrays implementation
+
+using System;
+namespace examples{
+        class Program{
+                static void Main(){
+                        //integer array
+                        int[] myInts={ 10, 20,30};
+                        Console.WriteLine("myInts1:{0},myInts1:{1},myInts1:{2}",myInts[0],myInts[1],myInts[2]);
+                       
+                        //boolean array
+                        bool[][] boolArray=new bool[2][];
+                        boolArray[0]=new bool[2];
+                        boolArray[1]=new bool[1];
+                        boolArray[0][0]=true;
+                        boolArray[0][1]=false;
+                        boolArray[1][0]=true;
+                        Console.WriteLine("bool1:{0},bool2:{1},bool3:{2}",boolArray[0][0],boolArray[0][1],boolArray[1][0]);
+
+                        //character array
+                        string[] str=new string[3];
+                        str[0]="Pradeep";
+                        str[1]="Kumar";
+                        str[2]="tripathi";
+                        Console.WriteLine("Str1:{0},Str2:{1},Str3:{2}",str[0],str[1],str[2]);
+
+                        //double array
+                        double[,] doubleArray=new double[2,3];
+                        doubleArray[0,0]=3.14;
+                        doubleArray[0,1]=23.42;
+                        doubleArray[1,0]=1.4566;
+                        doubleArray[1,1]=11.787878;
+                        Console.WriteLine("double[0,0]:{0},double[0,1]:{1},double[1,0]:{2},double[1,0]:{3}",doubleArray[0,0],doubleArray[0,1],doubleArray[1,0],doubleArray[1,1]);
+
+                        
+                        
+                         
+                }
+        }
+         
+    }
+
+

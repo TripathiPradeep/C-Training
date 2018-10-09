@@ -1,0 +1,26 @@
+//Program To Find First 10 Prime No's
+using System; 
+namespace examples
+{
+class Program
+{
+    public static void Main()
+    {
+      int i=2,count,c;
+       for(count = 2; count <= 10; i++)  //iterate to find 10 no's
+    {
+        for(c = 2; c < i; c++)           //loop to check prime or not
+        {
+            if(i%c == 0)
+                break;
+        }
+        if(c == i) 
+        {
+            Console.WriteLine(i);
+            count++;   
+        }
+
+    }
+}
+}
+}

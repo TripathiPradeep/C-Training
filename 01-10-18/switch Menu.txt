@@ -1,0 +1,55 @@
+using System;
+
+namespace examples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String myInput;
+            int myInt;
+begin: 
+            Console.WriteLine("Welcome!!!");
+            Console.WriteLine("Choose your dish!!");
+            Console.WriteLine("1.Dosa");
+Console.WriteLine("2.Idli");
+Console.WriteLine("3.Upma");
+Console.WriteLine("4.Poori");
+
+	     Console.WriteLine("Enter your choice");
+             myInput=Console.ReadLine();
+             myInt=Int32.Parse(myInput);
+                 
+
+switch(myInt)
+{
+case 1: Console.WriteLine("Your choice is Dosa");
+break;
+case 2: Console.WriteLine("Your choice is Idli");
+break;
+case 3: Console.WriteLine("Your choice is Upma");
+break;
+case 4: Console.WriteLine("Your choice is Poori");
+break;
+default:
+Console.WriteLine("You Must Choose From THe Menu!!!");
+break;
+}
+Console.WriteLine("Enter \"continue\" or \"quit\" to move further");
+string control=Console.ReadLine();
+
+decide:
+switch(control)
+{
+case "continue" : goto begin;
+case "quit" : Console.WriteLine("BYE!!!");
+               break;
+default:
+Console.WriteLine("Enter correct choice");
+goto decide;
+
+}               
+
+ }
+    }
+}

@@ -1,0 +1,31 @@
+//implement class
+
+using System;
+
+namespace examples{
+
+    class Program{
+            class A{
+                    public A(){
+                            Console.WriteLine("Default class Constructor");
+                    }
+                    public void mA(){
+                            Console.WriteLine("Class A specific method");
+                    }
+            }
+            class B{
+                   public B(){
+                            A a=new A();
+                    } 
+                    public void mB(){
+                            Console.WriteLine("Class B specific method");   
+                    }        
+            }
+       
+       public static void Main(){
+        B b=new B();
+        b.mB();
+        Console.WriteLine("GoodBye!!!");
+       }
+}
+}

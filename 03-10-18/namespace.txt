@@ -1,0 +1,39 @@
+//implement namespacecalling
+
+using System;
+using aliasName=examples.tutorial.myExample1;
+//namespace example
+namespace examples{
+        //nested namespace
+        namespace tutorial{
+
+    
+            class myExample1{
+                   public static void myPrint1(){
+                           Console.WriteLine("1st namespace member");
+                   }
+            }
+    }
+
+    //program start class
+    class NamespaceCalling{
+            //main program
+            public static void Main(){
+                    tutorial.myExample1.myPrint1();
+                    tutorial.myExample2.myPrint2();
+                    aliasName.myPrint1();
+
+            }
+    }
+//alternate way of calling
+    
+        }
+        namespace examples.tutorial{
+           class myExample2{
+                   public static void myPrint2(){
+                           Console.WriteLine("2nd namespace member");
+                   }
+            } 
+    }
+
+

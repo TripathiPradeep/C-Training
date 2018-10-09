@@ -1,0 +1,57 @@
+using System;
+using System.Text.RegularExpressions;
+
+//Multilevel Inheritance Example
+namespace examples
+{
+        class Program{
+        //sealed class of mother
+        sealed class mother{
+                public int mEarning;
+                public mother(int mEarning){
+                       this.mEarning=mEarning;
+               }
+               public double getInterest(){
+               return (0.5*mEarning);
+        }
+        
+
+    
+    }
+
+
+
+        public class gFatherEarned{
+               public int earning1;
+               public gFatherEarned(int earning1){
+                       this.earning1=earning1;
+               }
+        }
+        //class square inheriting class side
+        public class fatherEarned : gFatherEarned
+         {
+             public int earning2;
+             public fatherEarned(int earning1,int earning2) :base(earning1){
+                       this.earning2=earning2;
+               }
+        }
+         //class cube inheriting class side
+        public class myself : fatherEarned{
+                //method to find volume
+             public int earning3;
+             public myself(int earning1,int earning2,int earning3) : base(earning1,earning2){
+                       this.earning3=earning3;
+               }
+        }
+        //Main block
+        public static void Main(){
+                //
+                myself me=new myself(100,200,300);
+                //
+                mother mom=new mother(400);
+                //
+                Console.WriteLine("total={0}",(me.earning3+me.earning2+me.earning1+mom.getInterest()));
+              
+        }
+}   
+ }         

@@ -1,0 +1,32 @@
+using System;
+using System.Text.RegularExpressions;
+
+overloading ToString Function
+
+namespace examples
+{
+        class Program{
+                public class person{
+                         public String fname;
+                         public String lname;
+                       
+                        public person(String fname, String lname)
+                        {
+                                this.fname=fname;
+                                this.lname=lname;
+                        }
+                 
+                         override public String ToString(){
+                         return this.fname+" "+this.lname;
+                 }
+                }
+                 public static void Main()
+                 {
+                         person p=new person("Pradeep","Tripthi");
+                                p.ToString();
+                 }
+
+                  
+       
+        }
+}

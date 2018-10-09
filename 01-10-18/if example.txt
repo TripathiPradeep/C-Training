@@ -1,0 +1,28 @@
+using System;
+
+namespace examples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String myInput;
+            int myInt;
+            Console.WriteLine("Welcome!!!");
+            Console.WriteLine("Choose your dish!!");
+	     Console.WriteLine("Enter a number");
+             myInput=Console.ReadLine();
+             myInt=Int32.Parse(myInput);
+          //  Console.Write("Hello,{0}! ",Console.ReadLine());
+            Console.WriteLine("the number is {0}",myInt);
+
+                if(myInt<0){
+                  Console.WriteLine("number {0} is negative",myInt);
+}
+
+if(myInt>0){
+Console.WriteLine("number {0} is positive",myInt);
+}
+        }
+    }
+}

@@ -1,0 +1,40 @@
+using System;
+using System.Text.RegularExpressions;
+
+//Inheritance Example
+namespace examples
+{
+        class Program{
+        //Parent class(side)
+        public class Side{
+                
+        }
+        //class square inheriting class side
+        public class square : Side{
+                //method to find area
+                public void area(int length)
+                {
+                        Console.WriteLine("area of sq:{0}",(length*length));
+                }
+        }
+         //class cube inheriting class side
+        public class cube : Side{
+                //method to find volume
+               public void volume(int length)
+                {
+                        Console.WriteLine("Volume of Cube:{0}",(length*length*length));
+                }
+        }
+        //Main block
+        public static void Main(){
+                //object of class square
+                square sq=new square();
+                //calling area function
+                sq.area(2);
+                //object of class cube
+                cube cu=new cube();
+                //calling volume function
+                cu.volume(3);
+        }
+}   
+}             

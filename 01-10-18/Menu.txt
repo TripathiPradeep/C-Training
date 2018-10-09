@@ -1,0 +1,39 @@
+using System;
+
+namespace examples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String myInput;
+            int myInt;
+            Console.WriteLine("Welcome!!!");
+            Console.WriteLine("Choose your dish!!");
+            Console.WriteLine("1.Dosa");
+Console.WriteLine("2.Idli");
+Console.WriteLine("3.Upma");
+Console.WriteLine("4.Poori");
+	     Console.WriteLine("Enter your choice");
+             myInput=Console.ReadLine();
+             myInt=Int32.Parse(myInput);
+         
+
+                if(myInt==1){
+                  Console.WriteLine("You Chose Dosa");
+                   }
+                       else  if(myInt==2){
+                         Console.WriteLine("You Chose Idli");
+                         }
+                else  if(myInt==3){
+                  Console.WriteLine("You Chose Upma");
+                  }
+else if(myInt==4){
+                  Console.WriteLine("You Chose Poori");
+}
+else 
+Console.WriteLine("Please Select from the menu!!!");
+
+        }
+    }
+}

@@ -1,0 +1,35 @@
+//Program to check string functions
+using System; 
+namespace examples
+{
+class Program
+{
+    public static void Main()
+    {
+     
+
+     string strText1="pradeep";
+     string strText2="pradeep";
+
+     //CompareTo function
+     Console.WriteLine("Comparing strings using CompareOf :{0}",strText1.CompareTo(strText2).ToString());
+
+       //Equals function
+     Console.WriteLine("Comparing strings using Equals :{0}",strText1.Equals(strText2).ToString());
+
+	//SubString function
+     Console.WriteLine("finding substring in a string :{0}",strText1.Substring(3));
+
+	//Replace function
+     Console.WriteLine("Replacing the text in the string :{0}",strText1.Replace("pra","swa"));
+
+	//Insert function
+     Console.WriteLine("Inserting at specified location: {0}",strText2.Insert(3," "));
+
+	//Remove function
+     Console.WriteLine("Removing part of String: {0}",strText2.Remove(0,3));
+
+
+}
+}
+}

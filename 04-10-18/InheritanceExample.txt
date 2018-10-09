@@ -1,0 +1,42 @@
+using System;
+using System.Text.RegularExpressions;
+
+//Inheritance Example
+namespace examples
+{
+        public class Parent{
+                string parentString;
+                public Parent(){
+                        Console.WriteLine("Parent constructor");
+
+                }
+                 public Parent(string myString){
+                         parentString=myString;
+                        Console.WriteLine(parentString);
+
+                }
+                public void print(){
+                        Console.WriteLine("I'm a parent class");
+                }
+        }
+        public class Child : Parent
+        {
+                public Child() : base("from derived")
+                {
+                        Console.WriteLine("Child Constructor");
+                }
+                public new void print()
+                {
+                        base.print();
+                        Console.WriteLine("I'm a child class");
+                }
+                public static void Main()
+                {
+                        Child child=new Child();
+                        child.print();
+                        ((Parent)child).print();
+                }
+        }
+}
+
+   

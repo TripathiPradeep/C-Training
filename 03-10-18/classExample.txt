@@ -1,0 +1,34 @@
+//implement class
+
+using System;
+
+namespace examples
+{
+    class Program
+    {
+       
+            class OutputClass{
+string myOutput;
+
+//constructor
+public OutputClass(string myOutput){
+this.myOutput=myOutput;
+}
+//print function
+public void printString(){
+Console.WriteLine(myOutput);
+}
+}
+//main class
+class ExampleClass{
+   static void Main()
+        {
+//instance of output class
+OutputClass oc=new OutputClass("Hello");
+oc.printString();
+}
+}
+
+}
+}
+           

@@ -1,0 +1,28 @@
+using System;
+
+class MainClass {
+    // Method with same names but different parameters
+    public String sameName(int number)  {
+        if(number % 2 == 0) {
+            return number + " is even";
+        }   else    {
+            return number + " is odd";
+        }
+    }
+
+    public String sameName(int number1, int number2)  {
+        if(number1 > number2)   {
+            return number1 + " is greater";
+        }   else    {
+            return number2 + " is greater";
+        }
+    }
+
+    public static void Main(String[] args)  {
+        MainClass mainClass = new MainClass();
+
+	// Method overloading occurs 
+        Console.WriteLine(mainClass.sameName(9));
+        Console.WriteLine(mainClass.sameName(18, 76));
+    }
+}

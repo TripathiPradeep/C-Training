@@ -1,0 +1,23 @@
+using System;
+
+class Parent  {
+    public virtual void printHello()    {
+        Console.WriteLine("Hello, I am the parent");
+    }
+}
+
+class Child:Parent{
+    public override void printHello()    {
+        Console.WriteLine("Hello, I am the child");
+    }
+}
+
+class MainClass {
+    public static void Main(String[] args)  {
+        Child child  = new Child();
+        Parent parent = new Child();
+
+        child.printHello();
+        parent.printHello();
+    }
+}

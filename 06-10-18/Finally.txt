@@ -1,0 +1,28 @@
+using System;
+using System.IO;
+
+class FinallyExample  {
+    public static void Main()   {
+        int a = 10;
+
+	// Nested try-catch Block
+        try {
+            try {
+                File.OpenRead("FIle");
+                a = a/0;
+            }
+            catch (DivideByZeroException exception) {
+                Console.WriteLine(exception);
+            }
+            Console.WriteLine("Hello");
+        }
+        catch (ArithmeticException exception)  {
+           Console.WriteLine(exception);
+        }
+
+	// This block always executes
+        finally {
+            Console.WriteLine("Hey, I am finally");
+        }
+    }
+}

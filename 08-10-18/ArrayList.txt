@@ -1,0 +1,53 @@
+// Starting with Collections(ArrayList)
+using System;
+using System.Collections;
+namespace examples{
+class Program{
+        public static void Main(){
+                //objects of arraylist
+             ArrayList myAL = new ArrayList();
+                //initial capacity
+             Console.WriteLine("Capacity:{0}",myAL.Capacity);
+             //Add items
+             myAL.Add("HIII");
+             myAL.Add("P");
+             myAL.Add("R");
+             myAL.Add("A");
+             myAL.Add("D");
+             myAL.Add("E");
+             myAL.Add("E");
+             myAL.Add("P");
+             myAL.Add(".");
+             myAL.Add("!!!");
+
+             Console.WriteLine("count:{0}",myAL.Count);
+             Console.WriteLine("Capacity:{0}",myAL.Capacity);
+             Console.WriteLine("values:");
+             PrintValues(myAL);
+                //Remove
+             myAL.Remove(".");
+             PrintValues(myAL);
+                //RemoveAt
+             myAL.RemoveAt(5);
+             PrintValues(myAL);
+                //RemoveRange
+             myAL.RemoveRange(4,3);
+             PrintValues(myAL);
+                //Insert at specified position
+             myAL.Insert(4,"D");
+             PrintValues(myAL);
+
+                Console.WriteLine("count:{0}",myAL.Count);
+             Console.WriteLine("Capacity:{0}",myAL.Capacity);
+
+             
+}
+                public static void PrintValues(IEnumerable myList){
+                        foreach(Object obj in myList)
+                          Console.Write( " {0} ",obj);
+                        
+                         Console.WriteLine();
+                
+}
+}
+}

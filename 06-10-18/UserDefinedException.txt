@@ -1,0 +1,26 @@
+using System;
+using System.IO;
+
+class MainCLass {
+    public static void Main()   {
+        try {
+            Console.WriteLine("Good morning");
+
+	    // Raise the user defined exception
+            throw new UserException("This is user exception");
+        }   
+	
+	// Catch the user defined exceptions
+	catch (UserException userException)    {
+            Console.WriteLine(userException);
+        }
+        Console.WriteLine("Good night");
+    }
+}
+
+// Declare User Defined Exception
+class UserException:Exception  {
+    public UserException(String message):base(message)  {
+
+    }
+}

@@ -1,0 +1,18 @@
+using System;
+using System.IO;
+
+class ExceptionExample  {
+    public static void Main()   {
+
+	// Try Block where exception may arise
+        try
+        {
+            File.OpenRead("File1");
+        }
+
+	// Catch Block to handle the exception
+        catch (System.Exception exception)  {
+           Console.WriteLine(exception);
+        }
+    }
+}

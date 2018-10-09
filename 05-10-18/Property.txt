@@ -1,0 +1,29 @@
+using System;
+
+// Declare a Person Class
+class Person  {
+    String name;
+    int age;
+
+    // Property of the attribute 'name'
+    public string Name { get => name; set => name = value; }
+    
+    // Property of the attribute 'age'
+    public int Age { get => age; set => age = value; }
+}
+
+class MainClass {
+    public static void Main(String[] args)  {
+	
+	    // Create object of Person Class
+        Person person = new Person();
+
+        // Initialize instance variables with values through the properties (set is used here)
+        person.Name = "Raif";
+        person.Age = 22;
+
+        // Display the values of instance variables through properties (get is used here)
+        Console.WriteLine("Name: " + person.Name);
+        Console.WriteLine("Age: " + person.Age);
+    }
+}

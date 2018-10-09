@@ -1,0 +1,21 @@
+using System;
+using System.IO;
+
+class ExceptionExample  {
+    public static void Main()   {
+        int a = 10;
+        try
+        {
+	    // Raises a DivideByZeroException
+            a = a/0;
+            Console.WriteLine("Hello");
+        }
+
+	// Handle the DivideByZeroException
+        catch (DivideByZeroException exception)  {
+           Console.WriteLine(exception);
+        }
+
+        Console.WriteLine("Hey");
+    }
+}

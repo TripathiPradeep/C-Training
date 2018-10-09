@@ -1,0 +1,35 @@
+using System;
+using System.IO;
+
+class FinallyExample  {
+    public static void Main()   {
+        int number1;
+        int source1 = 5;
+        int number2;
+        int source2 = 10;
+        int flag = 0;
+
+	// Multiple exceptions may arise in 2nd and 5th line of this block (flag variable to recognize where exception occurs)
+        try {
+            number1 = source1;
+            number1 = number1/0;
+            flag = 1;
+            number2 = source2;
+            number2 = number2/0;
+        }
+        catch (System.Exception)    {
+		
+	    // 2nd line exception occurred
+            if(flag == 0)   {
+                Console.WriteLine("First Operation raised exception");
+            }   
+
+	    // 5th line exception occurred
+	    else    {
+                Console.WriteLine("Second Operation raised exception");
+            }
+        }   finally {
+            Console.WriteLine("I am always executed");
+        }
+    }
+}

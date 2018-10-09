@@ -1,0 +1,25 @@
+using System;
+
+// Declare class implementing the interface
+class InterfaceExample : MyInterface {
+    public static void Main(String[] args)  {
+        InterfaceExample interfaceExample = new InterfaceExample();
+        interfaceExample.methodToImplement();
+    }
+	
+    // Must implement this method, which was abstract in interface
+    public void methodToImplement() {
+        Console.WriteLine("I am implemented using interface");
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+using System;
+
+// Declare an interface
+public interface MyInterface   {
+    void methodToImplement();
+}

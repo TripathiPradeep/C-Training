@@ -1,0 +1,59 @@
+using System;
+namespace examples
+{
+class Program{
+                public class person{
+                         public String fname;
+                         public String lname;
+                       
+                        public person(String fname, String lname)
+                        {
+                                this.fname=fname;
+                                this.lname=lname;
+                        }
+                 
+                         override public String ToString(){
+                         return this.fname+" "+this.lname;
+                 }
+                  
+                }
+
+class MyGenericsClass<T,U>{
+        private T genericVariable1;
+        private U genericVariable2;
+        public MyGenericsClass(T value1,U value2){
+                this.genericVariable1=value1;
+                this.genericVariable2=value2;
+        }
+        public void genericMethod(T genericParameter1, U genericParameter2){
+                if(typeof(T)!=typeof(U)){
+                                Console.WriteLine("Enter same type");
+                }
+                                else{
+                if(genericParameter1.Equals(genericParameter2)){
+                        Console.WriteLine("Equal");
+                }
+                else
+                Console.WriteLine("Not Equal");
+                                }
+          //     Console.WriteLine("Return type:{0},value: {1}",typeof(T).ToString(),genericVariable);
+           //     Console.WriteLine("Param type:{0},value: {1}",typeof(T).ToString(),genericParameter);
+             //   return genericVariable;
+        }
+}
+public static void Main(){
+ MyGenericsClass<String,int> obj_genericClass= new MyGenericsClass<String,int>("hello",80);
+ obj_genericClass. genericMethod("hiii",20);
+ MyGenericsClass<int,int> obj_genericClass1= new MyGenericsClass<int,int>(100,120);
+ obj_genericClass1. genericMethod(20,20);
+
+person p1=new person("pradeep","tripathi");
+person p2=new person("pradeep","tripathi");
+
+
+MyGenericsClass<person,person> obj_genericClass2= new MyGenericsClass<person,person>(p1,p2);
+ obj_genericClass2.genericMethod(p1,p2);
+
+}
+}
+}

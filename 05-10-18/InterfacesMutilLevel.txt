@@ -1,0 +1,44 @@
+using System;
+
+// Parent interface
+interface ParentInterface {
+    void parentInterfaceMethod();
+    void childInterfaceMethod();
+}
+
+// Child interface
+interface ChildInterface {
+    void childInterfaceMethod();
+}
+
+class ExampleClass  {
+    public int number = 57;
+}
+
+class InterfaceExample : ExampleClass, ChildInterface, ParentInterface {
+    public static void Main(String[] args)  {
+
+	// Create instance of class InterfaceExample
+        InterfaceExample interfaceExample = new InterfaceExample();
+        
+	// Call parent and child interface methods
+	interfaceExample.parentInterfaceMethod();
+        interfaceExample.childInterfaceMethod();
+
+	// Create instance of class Example
+        ExampleClass exampleClass = new ExampleClass();
+
+	// Access attribute of Example Class
+        Console.WriteLine(exampleClass.number);
+    }
+
+    // Implement method of parent interface
+    public void parentInterfaceMethod() {
+        Console.WriteLine("I am parent interface method");
+    }
+
+    // Implement method of child interface
+    public void childInterfaceMethod()  {
+        Console.WriteLine("I am child interface method");
+    }
+}

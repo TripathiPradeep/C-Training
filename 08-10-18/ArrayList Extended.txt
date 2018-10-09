@@ -1,0 +1,58 @@
+// Starting with Collections(ArrayList)
+using System;
+using System.Collections;
+namespace examples{
+class Program{
+
+        public class person{
+                         public String fname;
+                         public String lname;
+                         public int age;  
+                        
+                         public person(String fname,String lname,int age){
+                                 this.fname=fname;
+                                 this.lname=lname;
+                                 this.age=age;
+                         }
+                         override public String ToString(){
+                         return this.fname+" "+this.lname+" "+this.age;
+                 }
+        
+        public static void Main(){
+               
+               person p1=new person("Pradeep","Tripathi",21);
+               person p2=new person("Vishal","Kulkarni",21);
+               person p3=new person("Tejus","Hegde",21);
+               person p4=new person("Raif","AbdulRazak",21);
+               ArrayList aList= new ArrayList();
+
+               aList.Add(p1);
+               aList.Add(p2);
+               aList.Add(p3);
+               aList.Add(p4);
+               PrintValues(aList);
+                int j=-1;
+               for(int i=0;i<aList.Count;i++){
+                        if(((person)aList[i]).fname=="Pradeep")
+                        {
+                                j=i;
+                                break;
+                        }
+                        }
+                aList[j]= new person("Pradi","tripathi",100);
+                PrintValues(aList);
+        
+        }
+
+        public static void PrintValues(IEnumerable myList){
+                        foreach(Object obj in myList)
+                          Console.WriteLine(obj+" ");
+                         Console.WriteLine();
+         
+
+             
+                
+}
+}
+}
+}

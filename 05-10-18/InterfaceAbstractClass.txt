@@ -1,0 +1,88 @@
+using System;
+
+// Declaration of interface
+interface CarInterface {
+    void engineType();
+}
+
+// Declaration of abstract class
+abstract class Engine {
+
+    // Abstract method
+    public abstract void fuelType();
+
+    // Virtual method
+    public virtual void carType()   {
+        Console.WriteLine("This is a four wheeler");
+    }
+}
+
+// This class extends Engine Class and Implements CarInterface
+class DieselCar: Engine, CarInterface  {
+
+    // Implement method from interface
+    public void engineType()    {
+        Console.WriteLine("This has a 4-stroke engine");
+    }
+
+    // Override abstract method from abstract class
+    public override void fuelType()  {
+        Console.WriteLine("Fuel: Diesel");
+    }
+}
+
+// This class extends Engine Class and Implements CarInterface
+class PetrolCar: Engine, CarInterface  {
+
+    // Implement method from interface
+    public void engineType()    {
+        Console.WriteLine("This has a 3-stroke engine");
+    }
+
+    // Override abstract method from abstract class
+    public override void fuelType()  {
+        Console.WriteLine("Fuel: Petrol");
+    }
+}
+
+
+// This class extends Engine Class and Implements CarInterface
+class ElectricCar: Engine, CarInterface  {
+
+    // Implement method from interface
+    public void engineType()    {
+        Console.WriteLine("This has a 2-stroke engine");
+    }
+
+    // Override abstract method from abstract class
+    public override void fuelType()  {
+        Console.WriteLine("Fuel: Electricity");
+    }
+
+    // Override virtual method from abstract class
+    override public void carType()  {
+        Console.WriteLine("This is a six wheeler");
+    }
+}
+
+class MainClass {
+    public static void Main(String[] args)  {
+
+	// Create instances of the 3 derived classes
+        DieselCar dieselCar = new DieselCar();
+        PetrolCar petrolCar = new PetrolCar();
+        ElectricCar electricCar = new ElectricCar();
+
+        dieselCar.engineType();
+        dieselCar.fuelType();
+        dieselCar.carType();
+
+        petrolCar.engineType();
+        petrolCar.fuelType();
+        petrolCar.carType();
+
+        electricCar.engineType();
+        electricCar.fuelType();
+        electricCar.carType();
+    }
+}

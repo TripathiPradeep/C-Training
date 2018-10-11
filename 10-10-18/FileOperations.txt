@@ -1,0 +1,89 @@
+//File Operations
+
+using System;
+using System.IO;
+using System.Text;
+namespace examples
+{ 
+        class Program{
+                public static void Main(String[] args){
+                        //FileIO();
+                        FileWriteLine();
+                        FileReadLineByLine();
+                        FileReadAllLines();
+                        FileCopy();
+                        FileDelete();
+
+
+				//Split a string based on character specified
+                        String Fullname="Pradeep-kumar-tripathi";
+                        string[] arrFullname = Fullname.Split("-");
+                        foreach (string var in arrFullname)  
+                        Console.WriteLine(var);
+                }
+
+              /*  public void FileIO(){
+                FileStream F = new FileStream(@"D:\Dotnet\test.dat",FileMode.OpenOrCreate,FileAccess.ReadWrite);
+                for(int i=1;i<=20;i++){
+                F.WriteByte((byte)i);
+                }
+                 F.Position =0;
+                for(int i=0;i<=20;i++){
+                Console.Write(F.ReadByte()+" ");
+                }
+                 F.Close();
+                Console.ReadKey();
+                }*/
+
+                          //write into file
+                public static void FileWriteLine(){
+                        StreamWriter F =new StreamWriter(@"D:\C#\test.dat",true,Encoding.ASCII);
+                        for(int i=0;i<=20;i++){
+                                F.WriteLine("This is a example {0}",i);
+                        }
+                        F.Close();
+                }
+                       
+                            //read line by line
+                public static void FileReadLineByLine(){
+                        StreamReader F =new StreamReader(@"D:\C#\test.dat");
+                        String a_line;
+                        a_line=F.ReadLine();
+                        Console.WriteLine("Printing Line by line");
+                        while(a_line != null){
+                                Console.WriteLine(a_line);
+                                 a_line=F.ReadLine();
+                        }
+                        F.Close();
+                        Console.ReadKey();
+                }
+
+
+                              //read all lines at ones
+                public static void FileReadAllLines(){
+                        String all_lines;
+                        all_lines=File.ReadAllText(@"D:\C#\test.dat");
+                        Console.WriteLine("Printing all lines"+all_lines);
+                }
+
+
+                           //copy from one file to other
+                public static void FileCopy(){
+                        File.Copy(@"D:\C#\test.dat",@"D:\C#\test2.dat",true);
+                        Console.WriteLine("Copied");
+                }
+
+
+                              //Delete the file from folder
+                 public static void FileDelete(){
+                        File.Delete(@"D:\C#\test.dat");
+                        Console.WriteLine("Deleted");
+                }
+        }
+}
+
+
+
+
+
+        

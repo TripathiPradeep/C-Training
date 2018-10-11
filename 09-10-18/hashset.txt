@@ -1,0 +1,94 @@
+//hashset implementation
+
+using System;
+using System.Collections.Generic;
+namespace examples
+{ class Program{
+
+        static HashSet<String> hSet1;
+        static HashSet<String> hSet2;
+
+        public static void Main(){
+
+		//create first hashset
+                CreateHashSet1();
+                Console.WriteLine("Printing first hash set 1");
+                PrintHashSet(hSet1);
+
+
+		//create second hashset
+                 CreateHashSet2();
+                Console.WriteLine("Printing first hash set 2");
+                PrintHashSet(hSet2);
+
+		//union of hashsets
+                Console.WriteLine("Printing Union of 1 with 2");
+                HashSetUnionWith();
+
+		//Except of hashsets
+                Console.WriteLine("Printing 1 except 2");
+                HashSetExceptWith();
+
+		//SymmetricExcept of hashsets
+                Console.WriteLine("Printing 1 symmetric except 2");
+                HashSetSymmetricExceptWith();
+
+        }
+
+
+		//create first hashset
+        public static void CreateHashSet1(){
+                String[] subjects = new String[] {
+                        "java",
+                        "c#",
+                        "sql",
+                        ".net"
+                };
+                hSet1 = new HashSet<String>(subjects);
+                Console.WriteLine();
+        }
+
+//print hashset
+        public static void PrintHashSet(HashSet<String> hSet){
+                foreach(var n in hSet){
+                        Console.WriteLine(n);
+                }
+        }
+
+//create second hashset
+        public static void CreateHashSet2(){
+                String[] subjects = new String[] {
+                        "java",
+                        "c#",
+                        "sql",
+                        "oracle"
+                };
+                hSet2 = new HashSet<String>(subjects);
+                Console.WriteLine("Count of data in hashset"+hSet2.Count);
+                Console.WriteLine();
+        }
+
+
+//union of hashsets
+        public static void HashSetUnionWith(){
+                HashSet<String> temp=new HashSet<String>(hSet1);
+                temp.ExceptWith(hSet2);
+                PrintHashSet(temp);
+        }
+
+
+//Except of hashsets
+        public static void HashSetExceptWith(){
+                HashSet<String> temp=new HashSet<String>(hSet1);
+                temp.ExceptWith(hSet2);
+                PrintHashSet(temp);
+        }
+
+//SymmetricExcept of hashsets
+        public static void HashSetSymmetricExceptWith(){
+                HashSet<String> temp=new HashSet<String>(hSet1);
+                temp.SymmetricExceptWith(hSet2);
+                PrintHashSet(temp);
+        }
+}
+}
